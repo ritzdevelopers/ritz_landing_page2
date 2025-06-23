@@ -31,276 +31,293 @@
         <div
           class="overlay absolute w-full h-full top-0 left-0 bg-[#00000086]"
         ></div>
-        <nav
-          class="w-[95vw] flex justify-between items-center p-4 bg-white text-black z-10 rounded-full"
-        >
-          <div class="side1 flex justify-between items-center gap-8">
-            <div class="flex border-r border-gray-300 p-2">
-              <img
-                src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/logo.svg"
-                alt=""
-              />
+
+        <!-- Navbar Wrapper -->
+        <div class="relative">
+          <!-- Navbar -->
+          <nav
+            class="w-[95vw] flex flex-wrap justify-between items-center p-4 bg-white text-black z-10 rounded-full gap-y-4"
+          >
+            <!-- Left Section -->
+            <div
+              class="side1 flex flex-wrap items-center gap-4 w-full lg:w-auto"
+            >
+              <div class="flex border-r border-gray-300 pr-4">
+                <img
+                  src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/logo.svg"
+                  alt="logo"
+                  class="w-28"
+                />
+              </div>
+
+              <!-- Desktop Nav Links -->
+              <div
+                class="hidden xl:flex gap-6 lg:gap-12 font-bold text-sm lg:text-base"
+              >
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  Demos
+                </p>
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  Pages
+                </p>
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  Services
+                </p>
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  Projects
+                </p>
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  News
+                </p>
+                <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+                  Contact
+                </p>
+              </div>
+
+              <!-- Hamburger Icon -->
+              <div class="xl:hidden ml-auto">
+                <i
+                  id="menu-icon"
+                  class="fas fa-bars text-xl cursor-pointer"
+                ></i>
+              </div>
             </div>
-            <div class="flex gap-12 justify-center items-center font-bold">
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                Demos
+
+            <!-- Right Section -->
+            <div
+              class="side2 hidden xl:flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 font-bold w-full md:w-auto"
+            >
+              <h2>Call Us</h2>
+              <p class="text-gray-500 border-b border-[#d6f922]">
+                +91-9999999999
               </p>
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                Pages
-              </p>
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                Services
-              </p>
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                Projects
-              </p>
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                News
-              </p>
-              <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-                Contact
-              </p>
+              <button
+                class="bg-[#b4d800] px-6 py-3 md:px-8 md:py-4 rounded-full"
+              >
+                Get In Touch
+              </button>
             </div>
-          </div>
-          <div class="side2 flex justify-center items-center gap-4 font-bold">
-            <h2>Call Us</h2>
-            <p class="text-gray-500 border-b border-[#d6f922]">
-              +91-9999999999
+          </nav>
+
+          <!-- Mobile Nav Menu -->
+          <div
+            id="mobile-menu"
+            class="fixed top-0 right-[-100%] h-full w-3/4 sm:w-1/2 bg-white z-50 p-8 flex flex-col gap-6 font-bold text-black shadow-2xl"
+          >
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-xl font-semibold">Menu</p>
+              <i
+                id="close-icon"
+                class="fas fa-times text-2xl cursor-pointer"
+              ></i>
+            </div>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              Demos
             </p>
-            <button class="bg-[#b4d800] px-8 py-4 rounded-full">
-              Get In Touch
-            </button>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              Pages
+            </p>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              Services
+            </p>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              Projects
+            </p>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              News
+            </p>
+            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
+              Contact
+            </p>
           </div>
-        </nav>
+        </div>
+
+        <!-- Main Hero Text -->
         <div
-          class="md:w-[65%] flex flex-col justify-center items-center text-center gap-4 z-10"
+          class="md:w-[65%] flex flex-col justify-center items-center text-center gap-4 z-10 px-4"
         >
-          <h1 class="text-4xl md:text-8xl font-bold">
+          <h1 class="text-3xl md:text-6xl lg:text-8xl font-bold">
             Shaping future through excellence
           </h1>
-          <p class="font-bold text-gray-300 text-xl md:text-2xl">
+          <p class="font-bold text-gray-300 text-lg md:text-2xl">
             We are a top 25 builder and developer fully invested in our
             customers’ success and improving the communities we serve.
           </p>
         </div>
+
+        <!-- Section Below Hero -->
         <div
-          class="border-t md:w-[85%] p-4 pt-10 border-gray-300 relative flex flex-col gap-12 z-10"
+          class="border-t md:w-[85%] px-4 py-10 border-gray-300 relative flex flex-col gap-12 z-10"
         >
-          <div class="flex justify-between items-center">
-            <div class="md:w-[50%]">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center gap-6"
+          >
+            <div class="lg:w-[50%]">
               <h1 class="text-xl md:text-3xl font-bold">
                 We developed landmark real estate projects that deliver lasting
                 value to investors and communities.
               </h1>
             </div>
-            <div class="flex gap-2 bg-white px-6 py-4 text-black rounded-full">
+            <div
+              class="flex gap-2 bg-white px-6 py-4 text-black rounded-full items-center"
+            >
               <p>View Services</p>
-              <p>Arrow Icon</p>
+              <i class="fas fa-arrow-right"></i>
             </div>
           </div>
-          <div class="cards flex justify-center items-center gap-4">
+
+          <!-- Cards -->
+          <div
+            class="cards flex flex-col md:flex-row justify-center items-center gap-6"
+          >
             <div
-              class="card flex flex-col p-8 gap-3 w-[32%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg"
+              class="card flex flex-col p-6 md:p-8 gap-4 w-full md:w-[32%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg"
             >
               <div class="cardHead border-b border-gray-400 p-4">
                 <p class="text-[#d6f922]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 32 32"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M4.265 7.999c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.057-1.674 3.734-3.734 3.734s-3.734-1.674-3.734-3.734zM0 7.999c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-
-                    <path
-                      d="M0 24.001c0-4.418 3.581-7.999 7.999-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-7.999-3.583-7.999-7.999z"
-                    ></path>
-
-                    <path
-                      d="M15.999 7.999c0-4.418 3.583-7.999 8.002-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-8.002-3.581-8.002-7.999z"
-                    ></path>
-
-                    <path
-                      d="M20.266 24.001c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.060-1.674 3.734-3.734 3.734s-3.734-1.677-3.734-3.734zM15.999 24.001c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-                  </svg>
+                  <!-- You can replace with a font awesome icon here -->
+                  <i class="fas fa-users text-3xl"></i>
                 </p>
               </div>
               <div class="cardInfo flex flex-col gap-3">
-                <h1 class="font-bold text-3xl">High quality products</h1>
-                <p class="font-bold text-xl text-gray-400">
+                <h1 class="font-bold text-2xl md:text-3xl">
+                  High quality products
+                </h1>
+                <p class="font-bold text-gray-400 text-base md:text-xl">
                   The luxurious and exquisite design harmonious with the
                   surrounding architecture provide the best living.
                 </p>
               </div>
             </div>
 
+            <!-- Repeat card -->
             <div
-              class="card flex flex-col p-8 gap-3 w-[32%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg"
+              class="card flex flex-col p-6 md:p-8 gap-4 w-full md:w-[32%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg"
             >
               <div class="cardHead border-b border-gray-400 p-4">
                 <p class="text-[#d6f922]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 32 32"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M4.265 7.999c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.057-1.674 3.734-3.734 3.734s-3.734-1.674-3.734-3.734zM0 7.999c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-
-                    <path
-                      d="M0 24.001c0-4.418 3.581-7.999 7.999-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-7.999-3.583-7.999-7.999z"
-                    ></path>
-
-                    <path
-                      d="M15.999 7.999c0-4.418 3.583-7.999 8.002-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-8.002-3.581-8.002-7.999z"
-                    ></path>
-
-                    <path
-                      d="M20.266 24.001c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.060-1.674 3.734-3.734 3.734s-3.734-1.677-3.734-3.734zM15.999 24.001c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-                  </svg>
+                  <i class="fas fa-building text-3xl"></i>
                 </p>
               </div>
               <div class="cardInfo flex flex-col gap-3">
-                <h1 class="font-bold text-3xl">High quality products</h1>
-                <p class="font-bold text-xl text-gray-400">
-                  The luxurious and exquisite design harmonious with the
-                  surrounding architecture provide the best living.
+                <h1 class="font-bold text-2xl md:text-3xl">
+                  Eco-friendly planning
+                </h1>
+                <p class="font-bold text-gray-400 text-base md:text-xl">
+                  Projects are planned with sustainable design that meets
+                  modern-day needs and long-term eco goals.
                 </p>
               </div>
             </div>
 
-            <div
-              class="card flex flex-col p-8 gap-3 w-[32%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg"
-            >
-              <div class="cardHead border-b border-gray-400 p-4">
-                <p class="text-[#d6f922]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 32 32"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M4.265 7.999c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.057-1.674 3.734-3.734 3.734s-3.734-1.674-3.734-3.734zM0 7.999c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-
-                    <path
-                      d="M0 24.001c0-4.418 3.581-7.999 7.999-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-7.999-3.583-7.999-7.999z"
-                    ></path>
-
-                    <path
-                      d="M15.999 7.999c0-4.418 3.583-7.999 8.002-7.999s7.999 3.581 7.999 7.999c0 4.418-3.581 7.999-7.999 7.999s-8.002-3.581-8.002-7.999z"
-                    ></path>
-
-                    <path
-                      d="M20.266 24.001c0-2.057 1.674-3.734 3.734-3.734s3.734 1.674 3.734 3.734c0 2.060-1.674 3.734-3.734 3.734s-3.734-1.677-3.734-3.734zM15.999 24.001c0 4.418 3.581 7.999 7.999 7.999s7.999-3.581 7.999-7.999c0-4.418-3.581-7.999-7.999-7.999s-7.999 3.581-7.999 7.999z"
-                    ></path>
-                  </svg>
-                </p>
-              </div>
-              <div class="cardInfo flex flex-col gap-3">
-                <h1 class="font-bold text-3xl">High quality products</h1>
-                <p class="font-bold text-xl text-gray-400">
-                  The luxurious and exquisite design harmonious with the
-                  surrounding architecture provide the best living.
-                </p>
-              </div>
-            </div>
+            <!-- Add more cards as needed -->
           </div>
         </div>
       </section>
 
       <section
-        class="s2 bg-white rounded-t-[40px] w-screen min-h-screen flex flex-col p-20 gap-12 items-center"
+        class="s2 bg-white rounded-t-[40px] w-full min-h-screen flex flex-col px-4 md:px-16 lg:px-20 py-10 md:py-20 gap-12 items-center"
       >
-        <div class="md:w-[95%] flex justify-between flex-col md:flex-row">
-          <div class="md:w-[30%]">
-            <button class="border border-black rounded-full px-6 py-2">
-              WHO WE ARE .
-            </button>
+        <!-- Top Section -->
+        <div
+          class="w-full max-w-[1440px] flex flex-col md:flex-row justify-between gap-8"
+        >
+          <!-- Left Button -->
+          <div class="w-full md:w-[30%] flex justify-center md:justify-start">
+            <div>
+              <button
+                class="border border-black rounded-full px-6 py-2 text-sm md:text-base"
+              >
+                WHO WE ARE .
+              </button>
+            </div>
           </div>
-          <div class="md:w-[70%] flex flex-col gap-20 p-7">
-            <h1 class="text-2xl font-bold md:text-7xl">
+
+          <!-- Text and Cards -->
+          <div class="w-full md:w-[70%] flex flex-col gap-10 md:gap-20 p-2">
+            <h1
+              class="text-2xl font-bold md:text-4xl lg:text-6xl leading-tight"
+            >
               The largest privately held real estate investors and managers in
               the world
             </h1>
-            <div class="cardRow flex flex-col w-[100%] md:flex-row gap-4">
-              <div class="s2-card flex flex-col gap-4 md:w-[45%]">
-                <div class="head flex gap-2 font-semibold text-3xl">
-                  <p><i class="fas fa-gem"></i></p>
+
+            <!-- Cards Row -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <!-- Vision Card -->
+              <div class="flex flex-col gap-4 w-full md:w-1/2">
+                <div
+                  class="flex items-center gap-2 font-semibold text-2xl md:text-3xl"
+                >
+                  <i class="fas fa-gem"></i>
                   <p>Our vision</p>
                 </div>
-                <div>
-                  <p class="text-gray-600 text-xl">
-                    To empower businesses with cutting-edge web solutions that
-                    enhance their digital presence and drive growth.
-                  </p>
-                </div>
+                <p class="text-gray-600 text-base md:text-xl">
+                  To empower businesses with cutting-edge web solutions that
+                  enhance their digital presence and drive growth.
+                </p>
               </div>
 
-              <div class="s2-card flex flex-col gap-4 md:w-[45%]">
-                <div class="head flex gap-2 font-semibold text-3xl">
-                  <p><i class="fas fa-rocket"></i></p>
+              <!-- Mission Card -->
+              <div class="flex flex-col gap-4 w-full md:w-1/2">
+                <div
+                  class="flex items-center gap-2 font-semibold text-2xl md:text-3xl"
+                >
+                  <i class="fas fa-rocket"></i>
                   <p>Our mission</p>
                 </div>
-                <div>
-                  <p class="text-gray-600 text-xl">
-                    To empower businesses with cutting-edge web solutions that
-                    enhance their digital presence and drive growth.
-                  </p>
-                </div>
+                <p class="text-gray-600 text-base md:text-xl">
+                  To empower businesses with cutting-edge web solutions that
+                  enhance their digital presence and drive growth.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="imgs md:w-[95%] flex md:flex-row flex-col justify-between">
+        <!-- Image Grid Section -->
+        <div class="w-full max-w-[1440px] flex flex-col md:flex-row gap-6">
+          <!-- Large Left Image -->
           <div
-            class="bgImg w-[100%] md:w-[48%] h-[90vh] rounded-[30px] overflow-hidden"
+            class="w-full md:w-1/2 h-[40vh] md:h-[90vh] rounded-[30px] overflow-hidden"
           >
             <img
               src="https://i.pinimg.com/736x/b0/12/fb/b012fbd65867cbf7c10ec152eba32ac5.jpg"
-              alt=""
+              alt="Main"
               class="w-full h-full object-cover"
             />
           </div>
 
-          <div
-            class="smallImgs w-[100%] md:w-[48%] h-[90vh] flex flex-col justify-around items-center"
-          >
-            <div
-              class="flex flex-col md:flex-row w-full h-[49%] justify-between"
-            >
+          <!-- Small Image Cards -->
+          <div class="w-full md:w-1/2 flex flex-col gap-6">
+            <!-- Top Two Cards -->
+            <div class="flex flex-col md:flex-row gap-6 h-auto">
+              <!-- Card 1 -->
               <div
-                class="sImg w-[100%] rounded-[30px] overflow-hidden md:w-[48%] h-[100%] bg-[#F5F5F5] flex flex-col justify-between p-6"
+                class="w-full md:w-1/2 bg-[#F5F5F5] rounded-[30px] p-6 flex flex-col justify-between gap-4"
               >
-                <div class="border-b border-gray-300 p-2">
-                  <p class="font-semibold text-sm">GLOBAL REACH</p>
-                </div>
-                <div class="flex flex-col">
-                  <h1 class="text-7xl font-bold">
+                <p class="font-semibold text-sm border-b border-gray-300 pb-2">
+                  GLOBAL REACH
+                </p>
+                <div>
+                  <h1 class="text-5xl md:text-7xl font-bold">
                     85<span class="text-[#E4ED64]">+</span>
                   </h1>
                   <p class="font-bold text-gray-600">offices worldwide</p>
                 </div>
               </div>
+
+              <!-- Card 2 -->
               <div
-                class="sImg w-[100%] rounded-[30px] overflow-hidden md:w-[48%] h-[100%] bg-[#F5F5F5] flex flex-col justify-between p-6"
+                class="w-full md:w-1/2 bg-[#F5F5F5] rounded-[30px] p-6 flex flex-col justify-between gap-4"
               >
-                <div class="border-b border-gray-300 p-2">
-                  <p class="font-semibold text-sm uppercase">local expertise</p>
-                </div>
-                <div class="flex flex-col">
-                  <h1 class="text-7xl font-bold">
+                <p
+                  class="font-semibold text-sm border-b border-gray-300 pb-2 uppercase"
+                >
+                  LOCAL EXPERTISE
+                </p>
+                <div>
+                  <h1 class="text-5xl md:text-7xl font-bold">
                     1,500<span class="text-[#E4ED64]">+</span>
                   </h1>
                   <p class="font-bold text-gray-600">employees</p>
@@ -308,29 +325,31 @@
               </div>
             </div>
 
-            <div
-              class="flex flex-col md:flex-row h-[49%] w-full justify-between"
-            >
+            <!-- Bottom Two Cards -->
+            <div class="flex flex-col md:flex-row gap-6 h-auto">
+              <!-- Card 3 -->
               <div
-                class="sImg w-[100%] rounded-[30px] overflow-hidden md:w-[48%] h-[100%] bg-[#F5F5F5] flex flex-col justify-between p-6"
+                class="w-full md:w-1/2 bg-[#F5F5F5] rounded-[30px] p-6 flex flex-col justify-between gap-4"
               >
-                <div class="border-b border-gray-300 p-2">
-                  <p class="font-semibold text-sm uppercase">our impact</p>
-                </div>
-                <div class="flex flex-col">
-                  <h1 class="text-7xl font-bold">
+                <p
+                  class="font-semibold text-sm border-b border-gray-300 pb-2 uppercase"
+                >
+                  OUR IMPACT
+                </p>
+                <div>
+                  <h1 class="text-5xl md:text-7xl font-bold">
                     250<span class="text-[#E4ED64]">+</span>
                   </h1>
                   <p class="font-bold text-gray-600">projects completed</p>
                 </div>
               </div>
-              <div
-                class="sImg w-[100%] rounded-[30px] overflow-hidden md:w-[48%] h-[100%]"
-              >
+
+              <!-- Card 4: Image -->
+              <div class="w-full md:w-1/2 rounded-[30px] overflow-hidden">
                 <img
                   src="https://i.pinimg.com/736x/df/b7/f6/dfb7f61cd947d9e217f75feb944654fd.jpg"
-                  alt=""
-                  class="w-full h-full"
+                  alt="Card"
+                  class="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -339,9 +358,12 @@
       </section>
 
       <section
-        class="s3 w-screen min-h-screen bg-[#F6F3EC] flex flex-col items-center gap-8 md:gap-20 p-12 md:pt-[100px] md:pb-20"
+        class="s3 w-screen min-h-screen bg-[#F6F3EC] flex flex-col items-center gap-8 md:gap-20 p-6 md:p-12 md:pt-[100px] md:pb-20"
       >
-        <div class="md:w-[50%] flex flex-col items-center gap-4 text-center">
+        <!-- Header -->
+        <div
+          class="md:w-[50%] w-full flex flex-col items-center gap-4 text-center"
+        >
           <button
             class="uppercase px-4 py-2 rounded-full border border-[#E4ED64]"
           >
@@ -352,17 +374,21 @@
           </h1>
         </div>
 
+        <!-- Cards Section -->
         <div
           class="imgsSection flex flex-col w-[95%] md:w-[90%] gap-8 md:gap-12"
         >
-          <div class="fRow flex md:flex-row flex-col justify-between w-full">
+          <!-- First Row -->
+          <div
+            class="fRow flex flex-col md:flex-row justify-between w-full gap-6"
+          >
+            <!-- Card 1 -->
             <div
-              class="s3Card relative w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
+              class="s3Card relative w-full md:w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
             >
               <div class="ttle p-3">
                 <h1 class="text-3xl font-bold">Real Estate Development</h1>
               </div>
-
               <div class="absolute w-[85%] h-[70%] -bottom-12 -left-4">
                 <img
                   src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/h1_service-1.png"
@@ -370,21 +396,20 @@
                   alt=""
                 />
               </div>
-
               <div
-                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3 transfor"
+                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3"
               >
                 <i class="fas fa-arrow-up rotate-45"></i>
               </div>
             </div>
 
+            <!-- Card 2 -->
             <div
-              class="s3Card relative w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
+              class="s3Card relative w-full md:w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
             >
               <div class="ttle p-3">
                 <h1 class="text-3xl font-bold">Real Estate Development</h1>
               </div>
-
               <div class="absolute w-[85%] h-[70%] -bottom-12 -left-4">
                 <img
                   src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/h1_service-2.png"
@@ -392,21 +417,20 @@
                   alt=""
                 />
               </div>
-
               <div
-                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3 transfor"
+                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3"
               >
                 <i class="fas fa-arrow-up rotate-45"></i>
               </div>
             </div>
 
+            <!-- Card 3 -->
             <div
-              class="s3Card relative w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
+              class="s3Card relative w-full md:w-[32%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
             >
               <div class="ttle p-3">
                 <h1 class="text-3xl font-bold">Real Estate Development</h1>
               </div>
-
               <div class="absolute w-[85%] h-[70%] -bottom-12 -left-4">
                 <img
                   src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/h1_service-3.png"
@@ -414,23 +438,25 @@
                   alt=""
                 />
               </div>
-
               <div
-                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3 transfor"
+                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3"
               >
                 <i class="fas fa-arrow-up rotate-45"></i>
               </div>
             </div>
           </div>
 
-          <div class="sRow flex md:flex-row flex-col justify-between w-full">
+          <!-- Second Row -->
+          <div
+            class="sRow flex flex-col md:flex-row justify-between w-full gap-6"
+          >
+            <!-- Card 4 -->
             <div
-              class="s3Card relative w-[48%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
+              class="s3Card relative w-full md:w-[48%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
             >
               <div class="ttle p-3">
                 <h1 class="text-3xl font-bold">Real Estate Development</h1>
               </div>
-
               <div class="absolute w-[80%] h-[65%] -bottom-12 -left-8">
                 <img
                   src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/h1_service-4.png"
@@ -438,21 +464,20 @@
                   alt=""
                 />
               </div>
-
               <div
-                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3 transfor"
+                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3"
               >
                 <i class="fas fa-arrow-up rotate-45"></i>
               </div>
             </div>
 
+            <!-- Card 5 -->
             <div
-              class="s3Card relative w-[48%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
+              class="s3Card relative w-full md:w-[48%] overflow-hidden rounded-[45px] p-8 h-[55vh] bg-[#FFFFFF]"
             >
               <div class="ttle p-3">
                 <h1 class="text-3xl font-bold">Real Estate Development</h1>
               </div>
-
               <div class="absolute w-[80%] h-[65%] -bottom-12 -left-8">
                 <img
                   src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/h1_service-5.png"
@@ -460,9 +485,8 @@
                   alt=""
                 />
               </div>
-
               <div
-                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3 transfor"
+                class="arrDv absolute -top-4 -right-4 bg-[#FFFFFF] text-3xl border border-gray-400 rounded-full px-5 py-3"
               >
                 <i class="fas fa-arrow-up rotate-45"></i>
               </div>
@@ -470,6 +494,7 @@
           </div>
         </div>
 
+        <!-- Footer -->
         <div class="w-[95%] text-center">
           <p class="font-bold">
             Discover top-tier real estate development services.
@@ -482,28 +507,35 @@
         <div
           class="s4Card w-full bg-black h-screen sticky top-0 left-0 flex flex-col md:flex-row"
         >
+          <!-- Left Info Section -->
+
           <div
-            class="info w-[50%] h-[45%] md:h-[100%] flex flex-col justify-between p-12"
+            class="info w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-between p-6 sm:p-10 md:p-12"
           >
-            <div class="topInfo flex flex-col gap-12 w-[80%] p-10">
+            <div
+              class="topInfo flex flex-col gap-8 w-full sm:w-[90%] md:w-[80%]"
+            >
               <div>
                 <button
-                  class="uppercase px-3 py-2 rounded-full border border-[#7AA93C] text-white font-semibold"
+                  class="uppercase px-4 py-2 rounded-full border border-[#7AA93C] text-white font-semibold text-sm sm:text-base"
                 >
                   selected projects .
                 </button>
               </div>
-              <h1 class="text-4xl md:text-6xl font-bold text-white">
+
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              >
                 Innovative designs, lasting impressions
               </h1>
             </div>
 
             <div
-              class="btmInfo flex items-start gap-5 p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit"
+              class="btmInfo flex items-start gap-4 sm:gap-5 p-3 sm:p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit mt-6"
             >
               <div>
                 <div
-                  class="text-4xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-16 h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
+                  class="text-2xl sm:text-3xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
                 >
                   01
                 </div>
@@ -511,28 +543,31 @@
 
               <div class="flex flex-col gap-2">
                 <div
-                  class="flex items-center gap-3 border-b border-gray-500 pb-1"
+                  class="flex items-center gap-2 sm:gap-3 border-b border-gray-500 pb-1"
                 >
-                  <i class="fas fa-location-dot text-[#d6f922] text-xl"></i>
+                  <i
+                    class="fas fa-location-dot text-[#d6f922] text-base sm:text-xl"
+                  ></i>
+
                   <p class="text-sm tracking-wide">Okhla, New Delhi</p>
                 </div>
 
-                <div>
-                  <h1
-                    class="text-2xl font-semibold tracking-wide text-gray-200"
-                  >
-                    Apartment Building
-                  </h1>
-                </div>
+                <h1
+                  class="text-base sm:text-xl font-semibold tracking-wide text-gray-200"
+                >
+                  Apartment Building
+                </h1>
               </div>
             </div>
           </div>
 
-          <div class="img w-[50%] h-[50%] md:h-[100%]">
+          <!-- Right Image Section -->
+
+          <div class="img w-full md:w-1/2 h-[45%] md:h-full">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/project_9.jpg"
               class="h-full w-full object-cover"
-              alt=""
+              alt="Project"
             />
           </div>
         </div>
@@ -540,28 +575,35 @@
         <div
           class="s4Card w-full bg-black h-screen sticky top-0 left-0 flex flex-col md:flex-row"
         >
+          <!-- Left Info Section -->
+
           <div
-            class="info w-[50%] h-[45%] md:h-[100%] flex flex-col justify-between p-12"
+            class="info w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-between p-6 sm:p-10 md:p-12"
           >
-            <div class="topInfo flex flex-col gap-12 w-[80%] p-10">
+            <div
+              class="topInfo flex flex-col gap-8 w-full sm:w-[90%] md:w-[80%]"
+            >
               <div>
                 <button
-                  class="uppercase px-3 py-2 rounded-full border border-[#7AA93C] text-white font-semibold"
+                  class="uppercase px-4 py-2 rounded-full border border-[#7AA93C] text-white font-semibold text-sm sm:text-base"
                 >
                   selected projects .
                 </button>
               </div>
-              <h1 class="text-4xl md:text-6xl font-bold text-white">
+
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              >
                 Innovative designs, lasting impressions
               </h1>
             </div>
 
             <div
-              class="btmInfo flex items-start gap-5 p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit"
+              class="btmInfo flex items-start gap-4 sm:gap-5 p-3 sm:p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit mt-6"
             >
               <div>
                 <div
-                  class="text-4xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-16 h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
+                  class="text-2xl sm:text-3xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
                 >
                   02
                 </div>
@@ -569,26 +611,31 @@
 
               <div class="flex flex-col gap-2">
                 <div
-                  class="flex items-center gap-3 border-b border-gray-500 pb-1"
+                  class="flex items-center gap-2 sm:gap-3 border-b border-gray-500 pb-1"
                 >
-                  <i class="fas fa-location-dot text-[#d6f922] text-xl"></i>
-                  <p class="text-sm tracking-wide">Section 62, Noida</p>
+                  <i
+                    class="fas fa-location-dot text-[#d6f922] text-base sm:text-xl"
+                  ></i>
+
+                  <p class="text-sm tracking-wide">Sector 62, Noida</p>
                 </div>
 
-                <div>
-                  <h1 class="text-lg font-semibold tracking-wide text-gray-200">
-                    Edan Estate
-                  </h1>
-                </div>
+                <h1
+                  class="text-base sm:text-xl font-semibold tracking-wide text-gray-200"
+                >
+                  Eden Estate
+                </h1>
               </div>
             </div>
           </div>
 
-          <div class="img w-[50%] h-[50%] md:h-[100%]">
+          <!-- Right Image Section -->
+
+          <div class="img w-full md:w-1/2 h-[45%] md:h-full">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/project_6.jpg"
               class="h-full w-full object-cover"
-              alt=""
+              alt="Project"
             />
           </div>
         </div>
@@ -596,28 +643,35 @@
         <div
           class="s4Card w-full bg-black h-screen sticky top-0 left-0 flex flex-col md:flex-row"
         >
+          <!-- Left Info Section -->
+
           <div
-            class="info w-[50%] h-[45%] md:h-[100%] flex flex-col justify-between p-12"
+            class="info w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-between p-6 sm:p-10 md:p-12"
           >
-            <div class="topInfo flex flex-col gap-12 w-[80%] p-10">
+            <div
+              class="topInfo flex flex-col gap-8 w-full sm:w-[90%] md:w-[80%]"
+            >
               <div>
                 <button
-                  class="uppercase px-3 py-2 rounded-full border border-[#7AA93C] text-white font-semibold"
+                  class="uppercase px-4 py-2 rounded-full border border-[#7AA93C] text-white font-semibold text-sm sm:text-base"
                 >
                   selected projects .
                 </button>
               </div>
-              <h1 class="text-4xl md:text-6xl font-bold text-white">
+
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              >
                 Innovative designs, lasting impressions
               </h1>
             </div>
 
             <div
-              class="btmInfo flex items-start gap-5 p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit"
+              class="btmInfo flex items-start gap-4 sm:gap-5 p-3 sm:p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit mt-6"
             >
               <div>
                 <div
-                  class="text-4xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-16 h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
+                  class="text-2xl sm:text-3xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
                 >
                   03
                 </div>
@@ -625,26 +679,31 @@
 
               <div class="flex flex-col gap-2">
                 <div
-                  class="flex items-center gap-3 border-b border-gray-500 pb-1"
+                  class="flex items-center gap-2 sm:gap-3 border-b border-gray-500 pb-1"
                 >
-                  <i class="fas fa-location-dot text-[#d6f922] text-xl"></i>
-                  <p class="text-sm tracking-wide">Ghaziabad, Delhi NCR</p>
+                  <i
+                    class="fas fa-location-dot text-[#d6f922] text-base sm:text-xl"
+                  ></i>
+
+                  <p class="text-sm tracking-wide">Gurugram, Hariyana</p>
                 </div>
 
-                <div>
-                  <h1 class="text-lg font-semibold tracking-wide text-gray-200">
-                    Vista at council Square
-                  </h1>
-                </div>
+                <h1
+                  class="text-base sm:text-xl font-semibold tracking-wide text-gray-200"
+                >
+                  Vista at Councill Square
+                </h1>
               </div>
             </div>
           </div>
 
-          <div class="img w-[50%] h-[50%] md:h-[100%]">
+          <!-- Right Image Section -->
+
+          <div class="img w-full md:w-1/2 h-[45%] md:h-full">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/project_2.jpg"
               class="h-full w-full object-cover"
-              alt=""
+              alt="Project"
             />
           </div>
         </div>
@@ -652,28 +711,35 @@
         <div
           class="s4Card w-full bg-black h-screen sticky top-0 left-0 flex flex-col md:flex-row"
         >
+          <!-- Left Info Section -->
+
           <div
-            class="info w-[50%] h-[45%] md:h-[100%] flex flex-col justify-between p-12"
+            class="info w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-between p-6 sm:p-10 md:p-12"
           >
-            <div class="topInfo flex flex-col gap-12 w-[80%] p-10">
+            <div
+              class="topInfo flex flex-col gap-8 w-full sm:w-[90%] md:w-[80%]"
+            >
               <div>
                 <button
-                  class="uppercase px-3 py-2 rounded-full border border-[#7AA93C] text-white font-semibold"
+                  class="uppercase px-4 py-2 rounded-full border border-[#7AA93C] text-white font-semibold text-sm sm:text-base"
                 >
                   selected projects .
                 </button>
               </div>
-              <h1 class="text-4xl md:text-6xl font-bold text-white">
+
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              >
                 Innovative designs, lasting impressions
               </h1>
             </div>
 
             <div
-              class="btmInfo flex items-start gap-5 p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit"
+              class="btmInfo flex items-start gap-4 sm:gap-5 p-3 sm:p-4 bg-[#111827] text-white rounded-xl shadow-lg w-fit mt-6"
             >
               <div>
                 <div
-                  class="text-4xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-16 h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
+                  class="text-2xl sm:text-3xl font-bold text-[#d6f922] bg-gray-500 rounded-full w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center shadow-inner ring-2 ring-[#d6f922]"
                 >
                   04
                 </div>
@@ -681,54 +747,58 @@
 
               <div class="flex flex-col gap-2">
                 <div
-                  class="flex items-center gap-3 border-b border-gray-500 pb-1"
+                  class="flex items-center gap-2 sm:gap-3 border-b border-gray-500 pb-1"
                 >
-                  <i class="fas fa-location-dot text-[#d6f922] text-xl"></i>
-                  <p class="text-sm tracking-wide">Gurugram, Hariyana</p>
+                  <i
+                    class="fas fa-location-dot text-[#d6f922] text-base sm:text-xl"
+                  ></i>
+
+                  <p class="text-sm tracking-wide">Ghaziabad, Delhi NCR</p>
                 </div>
 
-                <div>
-                  <h1 class="text-lg font-semibold tracking-wide text-gray-200">
-                    Office Building
-                  </h1>
-                </div>
+                <h1
+                  class="text-base sm:text-xl font-semibold tracking-wide text-gray-200"
+                >
+                  Office Building
+                </h1>
               </div>
             </div>
           </div>
 
-          <div class="img w-[50%] h-[50%] md:h-[100%]">
+          <!-- Right Image Section -->
+
+          <div class="img w-full md:w-1/2 h-[45%] md:h-full">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/04/project_5.jpg"
               class="h-full w-full object-cover"
-              alt=""
+              alt="Project"
             />
           </div>
         </div>
       </section>
 
       <section
-        class="s5 w-screen min-h-screen bg-[#FFFFFF] flex justify-between flex-col md:flex-row items-center p-20"
+        class="s5 w-full min-h-screen bg-white flex flex-col lg:flex-row items-center px-4 md:px-12 lg:px-20 py-16 gap-16 lg:gap-10"
       >
-        <div class="w-[95%] h-[100%] md:w-[35%] relative">
+        <!-- Left Image with Card -->
+        <div class="w-full lg:w-[40%] relative">
           <img
             src="https://i.pinimg.com/736x/e6/02/9e/e6029eaf120cb2b391e62a89c0726908.jpg"
-            class="w-full h-full object-cover rounded-[20px]"
-            alt=""
+            class="w-full h-auto max-h-[500px] lg:max-h-[650px] object-cover rounded-3xl shadow-lg"
+            alt="Modern Design"
           />
 
-          <!-- Absolute Position Div -->
-
-          <!-- Blurred Mirror Card -->
+          <!-- Rating Card -->
           <div
-            class="absolute -bottom-10 left-10 flex justify-center items-center flex-col w-[15vw] p-12 pb-10 backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-4 shadow-xl text-white"
+            class="absolute -bottom-10 left-6 sm:left-10 flex flex-col justify-center items-center w-[80%] sm:w-[220px] p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-xl text-white"
           >
-            <!-- Rating -->
-            <h1 class="text-6xl font-bold mb-2 text-[#E4ED64]">4.9</h1>
-
+            <h1 class="text-4xl md:text-5xl font-bold text-[#E4ED64] mb-2">
+              4.9
+            </h1>
             <!-- Avatars -->
             <div class="flex gap-2 mb-2">
               <div
-                class="h-[60px] w-[60px] rounded-full overflow-hidden border border-white/20"
+                class="h-12 w-12 rounded-full overflow-hidden border border-white/20"
               >
                 <img
                   class="h-full w-full object-cover"
@@ -737,7 +807,7 @@
                 />
               </div>
               <div
-                class="h-[60px] w-[60px] rounded-full overflow-hidden border border-white/20"
+                class="h-12 w-12 rounded-full overflow-hidden border border-white/20"
               >
                 <img
                   class="h-full w-full object-cover"
@@ -746,7 +816,7 @@
                 />
               </div>
               <div
-                class="h-[60px] w-[60px] rounded-full overflow-hidden border border-white/20"
+                class="h-12 w-12 rounded-full overflow-hidden border border-white/20"
               >
                 <img
                   class="h-full w-full object-cover"
@@ -756,7 +826,7 @@
               </div>
             </div>
 
-            <!-- Star Ratings -->
+            <!-- Stars -->
             <div class="flex gap-1 mb-1 text-yellow-400 text-sm">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -765,86 +835,91 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
 
-            <!-- Text -->
-            <p class="text-md font-bold text-white tracking-wide">
+            <p class="text-center text-sm font-medium text-white">
               2k+ satisfied customers
             </p>
           </div>
         </div>
 
-        <div class="w-[95%] md:w-[60%] flex flex-col gap-2">
-          <div class="flex flex-col p-10 gap-8 items-start w-[100%]">
+        <!-- Right Content -->
+        <div class="w-full lg:w-[60%] flex flex-col gap-10">
+          <!-- Heading -->
+          <div class="flex flex-col gap-4 md:gap-6">
             <button
-              class="uppercase px-4 py-2 rounded-full border border-[#d6f922] text-black"
+              class="uppercase px-4 py-2 rounded-full border border-[#d6f922] text-black text-sm hover:bg-[#f0f8b0] transition"
             >
-              our commitment .
+              our commitment.
             </button>
-            <h1 class="text-2xl md:text-6xl font-bold">
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight"
+            >
               What makes us different
             </h1>
-            <p class="text-xl">
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl">
               It’s not just about creating something good; it’s about designing,
               innovating, and collaborating to forge remarkable and unparalleled
               experiences.
             </p>
           </div>
 
-          <div class="w-[100%] flex flex-col gap-4">
+          <!-- Feature Cards -->
+          <div class="flex flex-col gap-8">
+            <!-- Card Template -->
             <div
-              class="s5Card w-[100%] border-t border-gray-300 flex flex-col md:flex-row justify-between gap-4"
+              class="border-t border-gray-200 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 group hover:bg-gray-50 transition rounded-xl px-4 py-4"
             >
-              <div class="flex gap-4 justify-center items-center">
-                <p class="px-6 py-6 rounded-full bg-[#E4ED64]">
-                  <i class="far fa-thumbs-up text-5xl"></i>
-                </p>
-
-                <h1 class="font-bold text-2xl">Corporate Responsibility</h1>
+              <div class="flex gap-4 items-center">
+                <div
+                  class="p-4 md:p-5 rounded-full bg-[#E4ED64] text-black shadow-md"
+                >
+                  <i class="far fa-thumbs-up text-2xl md:text-3xl"></i>
+                </div>
+                <h2 class="font-semibold text-xl md:text-2xl text-gray-800">
+                  Corporate Responsibility
+                </h2>
               </div>
-
-              <div class="p-16">
-                <p class="font-semibold text-[#8A8A8A] text-xl">
-                  Our goal is zero incidents and our lost time frequency rate is
-                  industry leading
-                </p>
-              </div>
+              <p class="text-gray-600 text-sm md:text-base max-w-xl">
+                Our goal is zero incidents and our lost time frequency rate is
+                industry leading.
+              </p>
             </div>
 
             <div
-              class="s5Card w-[100%] border-t border-gray-300 flex flex-col md:flex-row justify-between gap-4"
+              class="border-t border-gray-200 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 group hover:bg-gray-50 transition rounded-xl px-4 py-4"
             >
-              <div class="flex gap-4 justify-center items-center">
-                <p class="px-6 py-6 rounded-full bg-[#E4ED64]">
-                  <i class="fas fa-users text-4xl"></i>
-                </p>
-
-                <h1 class="font-bold text-2xl">Corporate Responsibility</h1>
+              <div class="flex gap-4 items-center">
+                <div
+                  class="p-4 md:p-5 rounded-full bg-[#E4ED64] text-black shadow-md"
+                >
+                  <i class="fas fa-users text-2xl md:text-3xl"></i>
+                </div>
+                <h2 class="font-semibold text-xl md:text-2xl text-gray-800">
+                  Customer First Approach
+                </h2>
               </div>
-
-              <div class="p-16">
-                <p class="font-semibold text-[#8A8A8A] text-xl">
-                  Our goal is zero incidents and our lost time frequency rate is
-                  industry leading
-                </p>
-              </div>
+              <p class="text-gray-600 text-sm md:text-base max-w-xl">
+                We design tailored solutions and ensure top-tier client
+                satisfaction in all our deliveries.
+              </p>
             </div>
 
             <div
-              class="s5Card w-[100%] border-t border-gray-300 flex flex-col md:flex-row justify-between gap-4"
+              class="border-t border-gray-200 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 group hover:bg-gray-50 transition rounded-xl px-4 py-4"
             >
-              <div class="flex gap-4 justify-center items-center">
-                <p class="px-6 py-6 rounded-full bg-[#E4ED64]">
-                  <i class="fas fa-link text-4xl"></i>
-                </p>
-
-                <h1 class="font-bold text-2xl">Corporate Responsibility</h1>
+              <div class="flex gap-4 items-center">
+                <div
+                  class="p-4 md:p-5 rounded-full bg-[#E4ED64] text-black shadow-md"
+                >
+                  <i class="fas fa-link text-2xl md:text-3xl"></i>
+                </div>
+                <h2 class="font-semibold text-xl md:text-2xl text-gray-800">
+                  Reliable Partnerships
+                </h2>
               </div>
-
-              <div class="p-16">
-                <p class="font-semibold text-[#8A8A8A] text-xl">
-                  Our goal is zero incidents and our lost time frequency rate is
-                  industry leading
-                </p>
-              </div>
+              <p class="text-gray-600 text-sm md:text-base max-w-xl">
+                We build trust-based relationships with our clients and partners
+                for long-term success.
+              </p>
             </div>
           </div>
         </div>
@@ -853,14 +928,16 @@
       <section
         class="s6 w-screen min-h-screen flex flex-col rounded-b-[40px] items-center p-10 bg-[#F8F5F0]"
       >
-        <div class="w-[95%] md:w-[60%] text-center mx-auto my-10">
+        <!-- Hero Section -->
+        <div
+          class="w-[95%] sm:w-[90%] md:w-[80%] lg:w-[60%] text-center mx-auto my-12 px-4"
+        >
           <h1
-            class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4"
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-snug mb-6"
           >
             Building Dreams, One Home at a Time
           </h1>
-
-          <p class="text-base md:text-lg text-gray-600">
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             At Spaciaz Real Estate, we don’t just sell properties — we help
             families find their forever homes. With a legacy of trust,
             transparency, and unparalleled service, we’ve helped over 5,000
@@ -868,23 +945,21 @@
           </p>
         </div>
 
-        <!-- Clients Reviews Carousel With Responsive Design-->
-        <div
-          class="w-full h-[50vh] flex justify-center items-center max-w-4xl px-4"
-        >
+        <!-- Clients Reviews Carousel Section -->
+        <div class="w-full flex justify-center px-4 sm:px-6 md:px-8 mb-16">
           <div
-            class="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 overflow-hidden"
+            class="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 w-full max-w-4xl overflow-hidden shadow-xl"
           >
-            <!-- Carousel Content -->
+            <!-- Carousel Container -->
             <div
               id="carousel"
               class="flex transition-transform duration-500 ease-in-out"
             >
               <!-- Review Card 1 -->
               <div
-                class="min-w-full px-6 flex flex-col gap-3 items-center text-center"
+                class="min-w-full px-4 flex flex-col gap-4 items-center text-center"
               >
-                <p class="text-2xl italic">
+                <p class="text-lg sm:text-xl md:text-2xl italic text-black">
                   "Amazing experience! Highly recommend to everyone."
                 </p>
                 <div class="flex items-center gap-3 mt-4">
@@ -894,7 +969,7 @@
                     class="h-12 w-12 rounded-full border-2 border-white"
                   />
                   <div class="text-left">
-                    <h3 class="font-semibold">Sarah Khan</h3>
+                    <h3 class="font-semibold text-black">Sarah Khan</h3>
                     <p class="text-sm text-gray-300">
                       <i class="fa-solid fa-location-dot"></i> Delhi, India
                     </p>
@@ -904,9 +979,9 @@
 
               <!-- Review Card 2 -->
               <div
-                class="min-w-full px-6 flex flex-col gap-3 items-center text-center"
+                class="min-w-full px-4 flex flex-col gap-4 items-center text-center"
               >
-                <p class="text-2xl italic">
+                <p class="text-lg sm:text-xl md:text-2xl italic text-black">
                   "Service was excellent and very professional."
                 </p>
                 <div class="flex items-center gap-3 mt-4">
@@ -916,7 +991,7 @@
                     class="h-12 w-12 rounded-full border-2 border-white"
                   />
                   <div class="text-left">
-                    <h3 class="font-semibold">Amit Verma</h3>
+                    <h3 class="font-semibold text-black">Amit Verma</h3>
                     <p class="text-sm text-gray-300">
                       <i class="fa-solid fa-location-dot"></i> Mumbai, India
                     </p>
@@ -926,9 +1001,9 @@
 
               <!-- Review Card 3 -->
               <div
-                class="min-w-full px-6 flex flex-col gap-3 items-center text-center"
+                class="min-w-full px-4 flex flex-col gap-4 items-center text-center"
               >
-                <p class="text-2xl italic">
+                <p class="text-lg sm:text-xl md:text-2xl italic text-black">
                   "A luxury experience! I loved every moment."
                 </p>
                 <div class="flex items-center gap-3 mt-4">
@@ -938,7 +1013,7 @@
                     class="h-12 w-12 rounded-full border-2 border-white"
                   />
                   <div class="text-left">
-                    <h3 class="font-semibold">Priya Sharma</h3>
+                    <h3 class="font-semibold text-black">Priya Sharma</h3>
                     <p class="text-sm text-gray-300">
                       <i class="fa-solid fa-location-dot"></i> Bangalore, India
                     </p>
@@ -971,6 +1046,7 @@
             we’re proud to partner with best-in-class clients
           </p>
         </div>
+
         <div
           class="carouselContainer flex w-[90%] h-[20vh] justify-center items-center gap-20 overflow-hidden"
         >
@@ -2923,82 +2999,108 @@
             </p>
           </div>
         </div>
+
         <!-- Text Content About Our LeaderShip -->
-        <div
-          class="flex mt-12 flex-col justify-center items-center text-center md:w-[50%] gap-8"
+        <!-- Section Wrapper -->
+        <section
+          class="w-screen px-4 sm:px-6 lg:px-16 py-16 bg-[#0f0f0f] text-white"
         >
-          <button
-            class="uppercase font-semibold px-4 py-4 rounded-full text-sm"
-          >
-            meet the team
-          </button>
-          <h1 class="text-7xl font-bold">Global executive leadership</h1>
-        </div>
-
-        <div
-          class="w-[90%] mx-auto flex mb-20 flex-wrap justify-center gap-8 md:gap-6 lg:gap-12 mt-16"
-        >
-          <!-- Leader Card 1 -->
+          <!-- Heading -->
           <div
-            class="s6LeaderCard w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] relative"
+            class="flex flex-col justify-center items-center text-center gap-6 max-w-3xl mx-auto"
           >
-            <img
-              src="https://i.pinimg.com/736x/5e/77/16/5e7716965f07049f83d3a568db6be218.jpg"
-              class="w-full h-full object-cover rounded-xl"
-              alt="Leader 1"
-            />
-            <div
-              class="absolute left-1/2 -bottom-6 -translate-x-1/2 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl px-6 py-4 shadow-lg flex flex-col justify-center items-center text-white text-center w-[80%]"
+            <button
+              class="uppercase font-semibold px-6 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition"
             >
-              <p class="uppercase font-semibold tracking-wide text-sm">
-                Founder and CEO
-              </p>
-              <h1 class="text-xl font-bold mt-1">Dennis Daniyal</h1>
-            </div>
+              Meet the Team
+            </button>
+            <h1
+              class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight"
+            >
+              Global Executive Leadership
+            </h1>
           </div>
 
-          <!-- Leader Card 2 -->
+          <!-- Cards Container -->
           <div
-            class="s6LeaderCard w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] relative"
+            class="w-full max-w-7xl mx-auto flex flex-wrap justify-center gap-10 mt-16"
           >
-            <img
-              src="https://i.pinimg.com/736x/90/1e/9c/901e9c722dfc110924863b61ae7d64a2.jpg"
-              class="w-full h-full object-cover rounded-xl"
-              alt="Leader 2"
-            />
+            <!-- Leader Card -->
             <div
-              class="absolute left-1/2 -bottom-6 -translate-x-1/2 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl px-6 py-4 shadow-lg flex flex-col justify-center items-center text-white text-center w-[80%]"
+              class="relative w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] group"
             >
-              <p class="uppercase font-semibold tracking-wide text-sm">
-                Founder and CEO
-              </p>
-              <h1
-                class="text-2xl font-bold mt-1 hover:text-[#d6f922] cursor-pointer"
+              <img
+                src="https://i.pinimg.com/736x/5e/77/16/5e7716965f07049f83d3a568db6be218.jpg"
+                alt="Leader 1"
+                class="w-full h-full object-cover rounded-xl shadow-xl transition duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/20 w-[80%] px-6 py-4 rounded-xl shadow-lg flex flex-col items-center text-center text-white transition-all"
               >
-                Dennis Daniyal
-              </h1>
+                <p
+                  class="uppercase font-semibold tracking-wide text-xs sm:text-sm"
+                >
+                  Founder and CEO
+                </p>
+                <h3
+                  class="text-lg sm:text-xl font-bold mt-1 group-hover:text-[#d6f922]"
+                >
+                  Dennis Daniyal
+                </h3>
+              </div>
             </div>
-          </div>
 
-          <!-- Leader Card 3 -->
-          <div
-            class="s6LeaderCard w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] relative"
-          >
-            <img
-              src="https://i.pinimg.com/736x/97/42/15/9742150b8125478a316649e295c059bf.jpg"
-              class="w-full h-full object-cover rounded-xl"
-              alt="Leader 3"
-            />
+            <!-- Leader Card -->
             <div
-              class="absolute left-1/2 -bottom-6 -translate-x-1/2 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl px-6 py-4 shadow-lg flex flex-col justify-center items-center text-white text-center w-[80%]"
+              class="relative w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] group"
             >
-              <p class="uppercase font-semibold tracking-wide text-sm">
-                Founder and CEO
-              </p>
-              <h1 class="text-xl font-bold mt-1">Dennis Daniyal</h1>
+              <img
+                src="https://i.pinimg.com/736x/90/1e/9c/901e9c722dfc110924863b61ae7d64a2.jpg"
+                alt="Leader 2"
+                class="w-full h-full object-cover rounded-xl shadow-xl transition duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/20 w-[80%] px-6 py-4 rounded-xl shadow-lg flex flex-col items-center text-center text-white transition-all"
+              >
+                <p
+                  class="uppercase font-semibold tracking-wide text-xs sm:text-sm"
+                >
+                  Co-Founder & COO
+                </p>
+                <h3
+                  class="text-lg sm:text-xl font-bold mt-1 group-hover:text-[#d6f922] cursor-pointer"
+                >
+                  Aarav Malik
+                </h3>
+              </div>
+            </div>
+
+            <!-- Leader Card -->
+            <div
+              class="relative w-full sm:w-[80%] md:w-[45%] lg:w-[30%] h-[75vh] group"
+            >
+              <img
+                src="https://i.pinimg.com/736x/97/42/15/9742150b8125478a316649e295c059bf.jpg"
+                alt="Leader 3"
+                class="w-full h-full object-cover rounded-xl shadow-xl transition duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md border border-white/20 w-[80%] px-6 py-4 rounded-xl shadow-lg flex flex-col items-center text-center text-white transition-all"
+              >
+                <p
+                  class="uppercase font-semibold tracking-wide text-xs sm:text-sm"
+                >
+                  Head of Sales
+                </p>
+                <h3
+                  class="text-lg sm:text-xl font-bold mt-1 group-hover:text-[#d6f922]"
+                >
+                  Priya Mehra
+                </h3>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Contact Us Form -->
         <div
@@ -3008,29 +3110,29 @@
             background-size: cover;
             background-repeat: no-repeat;
           "
-          class="w-[98%] mt-20 min-h-[95vh] flex justify-center items-center bg-white relative rounded-[40px] overflow-hidden shadow-2xl"
+          class="w-[98%] mx-auto mt-20 min-h-screen flex justify-center items-center bg-white relative rounded-[40px] overflow-hidden shadow-2xl"
         >
           <!-- Absolute Shape Left -->
-          <div class="absolute bottom-0 -left-40 hidden md:block">
+          <div class="absolute bottom-0 -left-40 hidden lg:block">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/h1_shape.png"
               alt="shape"
-              class="w-[300px]"
+              class="w-[200px] md:w-[280px] lg:w-[320px]"
             />
           </div>
 
           <!-- Absolute Shape Right -->
-          <div class="absolute bottom-0 -right-40 hidden md:block">
+          <div class="absolute bottom-0 -right-40 hidden lg:block">
             <img
               src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/h1_shape.png"
               alt="shape"
-              class="w-[300px]"
+              class="w-[200px] md:w-[280px] lg:w-[320px]"
             />
           </div>
 
           <!-- Form Container -->
           <div
-            class="w-[95%] md:w-[90%] h-auto md:h-[90%] flex flex-col justify-center items-center gap-10 bg-white/60 backdrop-blur-md rounded-[40px] p-6 md:p-12"
+            class="w-full max-w-7xl h-auto flex flex-col justify-center items-center gap-10 bg-white/60 backdrop-blur-md rounded-[40px] p-5 sm:p-8 md:p-12"
           >
             <!-- Top Button -->
             <div>
@@ -3042,63 +3144,63 @@
             </div>
 
             <!-- Heading -->
-            <div class="md:w-[60%] text-center px-4">
+            <div class="w-full max-w-2xl text-center px-4">
               <h1
-                class="text-2xl md:text-4xl font-bold text-black leading-snug"
+                class="text-2xl sm:text-3xl md:text-4xl font-bold text-black leading-snug"
               >
                 Get specialist advice for residential, commercial or property
               </h1>
             </div>
 
             <!-- Form Section -->
-            <form class="w-full md:w-[80%] flex flex-col gap-6">
+            <form class="w-full max-w-4xl flex flex-col gap-6">
               <!-- Row 1 -->
-              <div class="flex flex-col md:flex-row justify-between gap-4">
+              <div class="flex flex-col md:flex-row gap-4">
                 <input
                   type="text"
                   name="name"
                   placeholder="Name*"
                   required
-                  class="h-[60px] w-full md:w-[48%] px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
+                  class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email*"
                   required
-                  class="h-[60px] w-full md:w-[48%] px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
+                  class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 />
               </div>
 
               <!-- Row 2 -->
-              <div class="flex flex-col md:flex-row justify-between gap-4">
+              <div class="flex flex-col md:flex-row gap-4">
                 <input
                   type="tel"
                   name="number"
                   placeholder="Phone Number*"
                   required
-                  class="h-[60px] w-full md:w-[48%] px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
+                  class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 />
                 <input
                   type="text"
                   name="message"
                   placeholder="Subject / Message"
-                  class="h-[60px] w-full md:w-[48%] px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
+                  class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 />
               </div>
 
               <!-- Row 3 -->
               <div
-                class="flex flex-col md:flex-row justify-between gap-4 items-center"
+                class="flex flex-col md:flex-row justify-between gap-4 items-start md:items-center"
               >
-                <p class="text-sm text-gray-700 md:w-[50%]">
+                <p class="text-sm text-gray-700 md:w-1/2">
                   We're excited to connect with you! Required fields are marked
                   *
                 </p>
                 <input
                   type="submit"
                   value="Submit"
-                  class="h-[60px] w-full md:w-[45%] bg-[#d6f922] text-black font-semibold rounded-[30px] hover:bg-[#d6f922]/90 transition cursor-pointer"
+                  class="h-[55px] w-full md:w-1/2 bg-[#d6f922] text-black font-semibold rounded-[30px] hover:bg-[#d6f922]/90 transition cursor-pointer"
                 />
               </div>
             </form>
@@ -3109,7 +3211,6 @@
         <div
           class="w-[90%] mx-auto flex flex-col justify-center items-center gap-20 mt-10"
         >
-          <!-- Heading And Buttons Section -->
           <div
             class="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-6"
           >
@@ -3161,10 +3262,6 @@
               </h2>
             </div>
 
-            <!-- Repeat above block for each card -->
-            <!-- You can repeat or map dynamically using a JS/React loop -->
-            <!-- COPY PASTE the same block below and change image/text if needed -->
-
             <div
               class="min-w-[80%] md:min-w-[31%] flex-shrink-0 flex flex-col gap-4 bg-white shadow-md rounded-xl p-4"
             >
@@ -3187,8 +3284,6 @@
                 Are sustainable materials the future homes
               </h2>
             </div>
-
-            <!-- Continue adding cards as needed -->
 
             <div
               class="min-w-[80%] md:min-w-[31%] flex-shrink-0 flex flex-col gap-4 bg-white shadow-md rounded-xl p-4"
@@ -3287,6 +3382,8 @@
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
