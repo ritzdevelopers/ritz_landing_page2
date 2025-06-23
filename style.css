@@ -1,0 +1,20 @@
+body {
+    overflow-x: hidden;
+    background: #000;
+}
+
+/* d6f922 */
+
+.carouselOne {
+    animation: crslAnim 60s linear infinite;
+}
+
+@keyframes crslAnim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
