@@ -9,6 +9,21 @@ body {
 .carouselOne {
     animation: crslAnim 60s linear infinite;
 }
+.btn1{
+    animation: btnTextAnim 8s linear infinite;
+}
+
+
+@keyframes btnTextAnim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
 
 @keyframes crslAnim {
     0% {

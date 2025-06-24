@@ -157,7 +157,7 @@ function section2Animations() {
     },
   });
   gsap.from(".s2-btm", {
-    y: "100%",
+    y: "20%",
     opacity: 0,
     // duration:0.8,
     ease: "linear",
@@ -166,13 +166,12 @@ function section2Animations() {
       trigger: ".s2-btm",
       scroller: "body",
       // markers:true,
-      start: "top 210%",
-      end: "top 70%",
-      scrub: 1,
+      start: "top 80%",
+      end: "top 80%",
+      scrub: 2,
     },
   });
 }
-
 function section4CardScrollAnime() {
   const allCards = document.querySelectorAll(".s4Card");
 
@@ -193,7 +192,7 @@ function section4CardScrollAnime() {
         scrollTrigger: {
           trigger: card,
           scroller: "body",
-        //   markers: true,
+          //   markers: true,
           start: "top 80%",
           end: "top 40%",
           scrub: true,
@@ -203,17 +202,128 @@ function section4CardScrollAnime() {
     );
   });
 }
+function section5MoreAnime() {
+  let allH1 = document.querySelectorAll(".s5TxtCont h1");
+  let allH2 = document.querySelectorAll(".s5TxtCont h2");
+  let allPara = document.querySelectorAll(".s5TxtCont p");
 
-function section5MoreAnime(){
-    
+  gsap.utils.toArray(allH2).forEach((h1Tag) => {
+    gsap.to(h1Tag, {
+      x: 200,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: h1Tag,
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        // end:"top 30%"
+      },
+    });
+  });
+}
+function section3Animations() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const s3ttl_cont = document.querySelector(".s3Ttl");
+
+    if (!s3ttl_cont) {
+      console.warn("Element with class .s3Ttl not found");
+      return;
+    }
+
+    const text = s3ttl_cont.textContent.trim();
+    s3ttl_cont.textContent = "";
+
+    text.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.innerText = char === " " ? "\u00A0" : char;
+      span.style.display = "inline-block";
+      s3ttl_cont.appendChild(span);
+    });
+
+    gsap.from(".s3Ttl span", {
+      y: -250,
+      opacity: 0,
+      duration: 1,
+      delay: 0.3,
+      stagger: 0.03,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".s3Ttl",
+        scroller: "body",
+        start: "top 70%",
+        end: "top 35%",
+        toggleActions: "play none none none",
+        // markers: true,
+        scrub: 1,
+      },
+    });
+  });
 }
 
+function section3CardAnimations() {
+ document.querySelectorAll(".s3CardT").forEach((card) => {
+  const bg = card.querySelector(".bgColors3Card");
+  const img = card.querySelector(".s3CardImg");
+  const title = card.querySelector(".s3CardTitle");
+  const arrow = card.querySelector(".arrDv1");
 
+  card.addEventListener("mouseenter", () => {
+    gsap.to(bg, {
+      y: "100%",
+      x: "-100%",
+      opacity: 1,
+      scale: 1,
+      borderLeftRadius: "10%",
+      duration: 0.5,
+    });
+    gsap.to(img, {
+      y: "-10%",
+    });
+    gsap.to(title, {
+      y: "100%",
+      color: "black",
+    });
+    gsap.to(arrow, {
+      x: "-140%",
+      y: "50%",
+      ease: "power2",
+      scale: 1,
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(bg, {
+      y: "-100%",
+      x: "100%",
+      opacity: 0,
+      scale: 0,
+      borderLeftRadius: "10%",
+      duration: 0.8,
+    });
+    gsap.to(img, {
+      y: "-4%",
+    });
+    gsap.to(title, {
+      y: "-10%",
+      color: "black",
+    });
+    gsap.to(arrow, {
+      x: "100%",
+      y: "-50%",
+      scale: 0,
+    });
+  });
+});
+}
+
+section3CardAnimations();
+section3Animations();
 section4CardScrollAnime();
 section2Animations();
 window.addEventListener("DOMContentLoaded", () => {
   heroScrollTriggerAnim();
-  //   heroCardScrollTriggerAnim();
 });
 heroSectionWithSection2();
 heroText();
