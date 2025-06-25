@@ -18,7 +18,138 @@
   </head>
 
   <body>
-    <main>
+     <main>
+  <!-- Navbar Wrapper -->
+  <div class="fixed left-[5%] top-6  w-[90vw] z-50">
+    <!-- Navbar -->
+    <nav class="w-full flex flex-wrap  justify-between items-center p-4 bg-white text-black z-50 overflow-hidden rounded-[40px] gap-y-4">
+      <!-- Left Section -->
+      <div class="side1 flex flex-wrap items-center gap-4 w-full lg:w-auto">
+        <div class="flex border-r border-gray-300 pr-4">
+          <img
+            src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/logo.svg"
+            alt="logo"
+            class="w-28 dkstLink"
+          />
+        </div>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden xl:flex gap-6 lg:gap-12 font-bold text-sm lg:text-base">
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">Demos</p>
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">Pages</p>
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">Services</p>
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">Projects</p>
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">News</p>
+          <p class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]">Contact</p>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="xl:hidden ml-auto">
+          <i id="menu-icon" class="fas fa-bars text-xl cursor-pointer"></i>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="side2 hidden xl:flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 font-bold w-full md:w-auto">
+        <h2 class="dkstLink2">Call Us</h2>
+        <p class="dkstLink2 text-gray-500 border-b border-[#d6f922]">+91-9999999999</p>
+        <button class="dkstLink2 contact-now bg-[#b4d800] px-6 py-3 md:px-8 md:py-4 rounded-full">
+          Get In Touch
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-[-100%] h-full w-3/4 sm:w-1/2 bg-white z-50 p-8 flex flex-col gap-6 font-bold text-black shadow-2xl transition-all duration-300"
+    >
+      <div class="flex justify-between items-center mb-6">
+        <p class="text-xl font-semibold">Menu</p>
+        <i id="close-icon" class="fas fa-times text-2xl cursor-pointer"></i>
+      </div>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">Demos</p>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">Pages</p>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">Services</p>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">Projects</p>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">News</p>
+      <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">Contact</p>
+    </div>
+  </div>
+
+ <div
+        id="contactModal"
+        class="fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50 backdrop-blur-sm"
+      >
+        <div
+          class="bg-white dark:bg-gray-900 w-[95vw] max-w-5xl mx-auto rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row relative animate-fadeIn"
+        >
+          <!-- Close Icon -->
+          <i
+            id="closeModal"
+            class="fas fa-times absolute top-4 right-4 z-50 text-gray-500 text-2xl cursor-pointer hover:text-red-500 transition-all"
+          ></i>
+
+          <!-- Left Side Image + Text -->
+          <div class="md:w-1/2 w-full relative">
+            <img
+              src="https://i.pinimg.com/736x/68/92/d4/6892d4fbc0a3dd20ab053ef2333853d3.jpg"
+              alt="Contact"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 bg-gradient-to-t from-black/80 to-transparent text-white p-6"
+            >
+              <h1 class="text-2xl font-bold mb-2">Get In Touch</h1>
+              <p class="text-sm leading-relaxed">
+                We'd love to hear from you! Whether you have questions or just
+                want to say hi, feel free to reach out. Our team is ready to
+                assist you.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Side Form -->
+          <div class="md:w-1/2 w-full p-8 bg-white dark:bg-gray-900">
+            <h2
+              class="text-3xl font-semibold mb-4 text-gray-800 dark:text-white"
+            >
+              Contact Us
+            </h2>
+            <form class="space-y-5" method="post" id="form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                class="w-full border-b-2 border-gray-300   px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              />
+              <input
+                type="text"
+                name="contact"
+                placeholder="Your Email or Phone"
+                required
+                class="w-full border-b-2 border-gray-300   px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              />
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+                class="w-full border-b-2 border-gray-300  resize-none px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              ></textarea>
+              <button
+                type="submit"
+                name="enBtn"
+                class="bg-blue-600 hover:bg-blue-700 text-white w-full py-3 rounded-lg font-semibold shadow-md transition-all duration-200"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <section
         style="
           background-image: url(https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/h1_bg.jpg);
@@ -32,121 +163,11 @@
           class="overlay absolute w-full h-full top-0 left-0 bg-[#00000086]"
         ></div>
 
-        <!-- Navbar Wrapper -->
-        <div class="relative overflow-hidden navbarCont">
-          <!-- Navbar -->
-          <nav
-            class="w-[95vw] flex flex-wrap justify-between items-center p-4 bg-white text-black z-10 overflow-hidden rounded-full gap-y-4"
-          >
-            <!-- Left Section -->
-            <div
-              class="side1 flex flex-wrap items-center gap-4 w-full lg:w-auto"
-            >
-              <div class="flex border-r border-gray-300 pr-4">
-                <img
-                  src="https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/logo.svg"
-                  alt="logo"
-                  class="w-28 dkstLink"
-                />
-              </div>
-
-              <!-- Desktop Nav Links -->
-              <div
-                class="hidden xl:flex gap-6 lg:gap-12 font-bold text-sm lg:text-base"
-              >
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  Demos
-                </p>
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  Pages
-                </p>
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  Services
-                </p>
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  Projects
-                </p>
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  News
-                </p>
-                <p
-                  class="dkstLink cursor-pointer hover:border-b hover:border-[#d6f922]"
-                >
-                  Contact
-                </p>
-              </div>
-
-              <!-- Hamburger Icon -->
-              <div class="xl:hidden ml-auto">
-                <i
-                  id="menu-icon"
-                  class="fas fa-bars text-xl cursor-pointer"
-                ></i>
-              </div>
-            </div>
-
-            <!-- Right Section -->
-            <div
-              class="side2 hidden xl:flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 font-bold w-full md:w-auto"
-            >
-              <h2 class="dkstLink2">Call Us</h2>
-              <p class="dkstLink2 text-gray-500 border-b border-[#d6f922]">
-                +91-9999999999
-              </p>
-              <button
-                class="dkstLink2 bg-[#b4d800] px-6 py-3 md:px-8 md:py-4 rounded-full"
-              >
-                Get In Touch
-              </button>
-            </div>
-          </nav>
-
-          <!-- Mobile Nav Menu -->
-          <div
-            id="mobile-menu"
-            class="fixed top-0 right-[-100%] h-full w-3/4 sm:w-1/2 bg-white z-50 p-8 flex flex-col gap-6 font-bold text-black shadow-2xl"
-          >
-            <div class="flex justify-between items-center mb-6">
-              <p class="text-xl font-semibold">Menu</p>
-              <i
-                id="close-icon"
-                class="fas fa-times text-2xl cursor-pointer"
-              ></i>
-            </div>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              Demos
-            </p>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              Pages
-            </p>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              Services
-            </p>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              Projects
-            </p>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              News
-            </p>
-            <p class="cursor-pointer hover:border-b hover:border-[#d6f922]">
-              Contact
-            </p>
-          </div>
-        </div>
+       
 
         <!-- Main Hero Text -->
         <div
-          class="md:w-[65%] flex flex-col justify-center items-center text-center gap-4 z-10 px-4"
+          class="md:w-[65%] flex flex-col justify-center items-center text-center gap-4 z-10 pt-20 px-4"
         >
           <h1 class="heroTtl text-3xl md:text-6xl lg:text-8xl font-bold">
             Shaping future through excellence
@@ -4338,10 +4359,11 @@
             </div>
 
             <!-- Form Section -->
-            <form class="w-full max-w-4xl flex flex-col gap-6">
+            <form class="w-full max-w-4xl flex flex-col gap-6" method="post" id="form2">
               <!-- Row 1 -->
               <div class="flex flex-col md:flex-row gap-4">
                 <input
+                required
                   type="text"
                   name="name"
                   placeholder="Name*"
@@ -4349,6 +4371,7 @@
                   class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
                 />
                 <input
+                required
                   type="email"
                   name="email"
                   placeholder="Email*"
@@ -4360,8 +4383,9 @@
               <!-- Row 2 -->
               <div class="flex flex-col md:flex-row gap-4">
                 <input
+                required
                   type="tel"
-                  name="number"
+                  name="contact"
                   placeholder="Phone Number*"
                   required
                   class="h-[55px] w-full px-5 rounded-[30px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-200"
@@ -4382,11 +4406,19 @@
                   We're excited to connect with you! Required fields are marked
                   *
                 </p>
-                <input
+                <button
+                type="submit"
+                name="enBtn"
+                  class="h-[55px] w-full md:w-1/2 bg-[#d6f922] text-black font-semibold rounded-[30px] hover:bg-[#d6f922]/90 transition cursor-pointer"
+              >
+                Send Message
+              </button>
+                <!-- <input
                   type="submit"
                   value="Submit"
+                  name="enBtn"
                   class="h-[55px] w-full md:w-1/2 bg-[#d6f922] text-black font-semibold rounded-[30px] hover:bg-[#d6f922]/90 transition cursor-pointer"
-                />
+                /> -->
               </div>
             </form>
           </div>

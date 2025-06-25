@@ -1,0 +1,72 @@
+ <div
+        id="contactModal"
+        class="fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50 backdrop-blur-sm"
+      >
+        <div
+          class="bg-white dark:bg-gray-900 w-[95vw] max-w-5xl mx-auto rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row relative animate-fadeIn"
+        >
+          <!-- Close Icon -->
+          <i
+            id="closeModal"
+            class="fas fa-times absolute top-4 right-4 z-50 text-gray-500 text-2xl cursor-pointer hover:text-red-500 transition-all"
+          ></i>
+
+          <!-- Left Side Image + Text -->
+          <div class="md:w-1/2 w-full relative">
+            <img
+              src="https://i.pinimg.com/736x/68/92/d4/6892d4fbc0a3dd20ab053ef2333853d3.jpg"
+              alt="Contact"
+              class="h-full w-full object-cover"
+            />
+            <div
+              class="absolute bottom-0 bg-gradient-to-t from-black/80 to-transparent text-white p-6"
+            >
+              <h1 class="text-2xl font-bold mb-2">Get In Touch</h1>
+              <p class="text-sm leading-relaxed">
+                We'd love to hear from you! Whether you have questions or just
+                want to say hi, feel free to reach out. Our team is ready to
+                assist you.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Side Form -->
+          <div class="md:w-1/2 w-full p-8 bg-white dark:bg-gray-900">
+            <h2
+              class="text-3xl font-semibold mb-4 text-gray-800 dark:text-white"
+            >
+              Contact Us
+            </h2>
+            <form class="space-y-5" method="post" id="form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                class="w-full border-b-2 border-gray-300   px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              />
+              <input
+                type="text"
+                name="contact"
+                placeholder="Your Email or Phone"
+                required
+                class="w-full border-b-2 border-gray-300   px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              />
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+                class="w-full border-b-2 border-gray-300  resize-none px-4 py-3 focus:outline-none outline-none bg-none dark:bg-gray-900 text-gray-800 dark:text-white"
+              ></textarea>
+              <button
+                type="submit"
+                name="enBtn"
+                class="bg-blue-600 hover:bg-blue-700 text-white w-full py-3 rounded-lg font-semibold shadow-md transition-all duration-200"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>

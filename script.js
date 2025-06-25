@@ -82,7 +82,7 @@ function heroText() {
   requestAnimationFrame(() => {
     let spans = document.querySelectorAll(".heroTtl span");
     if (spans.length > 0) {
-      tl.from(spans, {
+      gsap.from(spans, {
         x: "-150%",
         rotate: 45,
         opacity: 0,
@@ -90,7 +90,7 @@ function heroText() {
         duration: 0.4,
         stagger: 0.05,
       });
-      tl.from(hero_para, {
+      gsap.from(hero_para, {
         opacity: 0,
         scale: 0,
         duration: 0.4,
@@ -330,3 +330,79 @@ heroText();
 navbarGsapAnimation();
 navbarAnimation();
 carouselFunction();
+
+function contactUsModal() {
+  const modal = document.getElementById("contactModal");
+  const closeModal = document.getElementById("closeModal");
+  const contactBtns = document.querySelectorAll(".contact-now");
+
+  setTimeout(() => {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }, 8000);
+
+  contactBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+  });
+}
+contactUsModal();
+
+function enquiryFormSubmit() {
+  let url = "https://script.google.com/macros/s/AKfycbz9nZZUrKNdnH63kpaqXAfh6Xjl96Q7IpFVD--92LdkvbbwwfF2VkuSFQAGeoJDLLVZ/exec";
+  let form = document.querySelector("#form");
+  let form2 = document.querySelector("#form2");
+  
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    e.target.enBtn.innerHTML = "Submitting";
+    let enquiryData = new FormData(form);
+    fetch(url, {
+      method:"POST",
+      body:enquiryData
+    }).then((res)=>res.text()).then((finalRes)=>{
+        e.target.enBtn.innerHTML = "Submit";
+       alert("Enquiry Submit Successfully!");
+      console.log('====================================');
+      console.log(finalRes);
+      console.log('====================================');
+    }).catch((err)=>{
+     
+      console.log('====================================');
+      console.log("Form Err ", err);
+      alert("Server Error, Please Try Again.")
+      console.log('====================================');
+    })
+  });
+
+  form2.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    e.target.enBtn.innerHTML = "Submitting";
+    let enquiryData = new FormData(form);
+    fetch(url, {
+      method:"POST",
+      body:enquiryData
+    }).then((res)=>res.text()).then((finalRes)=>{
+        e.target.enBtn.innerHTML = "Submit";
+       alert("Enquiry Submit Successfully!");
+      console.log('====================================');
+      console.log(finalRes);
+      console.log('====================================');
+    }).catch((err)=>{
+     
+      console.log('====================================');
+      console.log("Form Err ", err);
+      alert("Server Error, Please Try Again.")
+      console.log('====================================');
+    })
+  });
+
+}
+enquiryFormSubmit();
