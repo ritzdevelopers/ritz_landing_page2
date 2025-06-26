@@ -21,6 +21,34 @@ function carouselFunction() {
 }
 gsap.registerPlugin(ScrollTrigger);
 
+function dekstopNavbarController() {
+  let lastScrollY = window.scrollY;
+  const navBar = document.querySelector(".dkstpNav");
+
+  if (!navBar) {
+    console.warn("No element found with class .dkstpNav");
+    return;
+  }
+
+  window.addEventListener("scroll", () => {
+    console.log("Scrolling...", window.scrollY);
+
+    if (window.scrollY > lastScrollY) {
+      // Scroll Down -> hide navbar
+      navBar.style.top = "-100%";
+    } else {
+      // Scroll Up -> show navbar
+      navBar.style.top = "33px";
+    }
+
+    lastScrollY = window.scrollY; 
+  });
+}
+
+// Run the function after DOM is loaded
+window.addEventListener("DOMContentLoaded", dekstopNavbarController);
+
+dekstopNavbarController();
 function navbarAnimation() {
   const menuIcon = document.getElementById("menu-icon");
   const closeIcon = document.getElementById("close-icon");
@@ -263,59 +291,59 @@ function section3Animations() {
 }
 
 function section3CardAnimations() {
- document.querySelectorAll(".s3CardT").forEach((card) => {
-  const bg = card.querySelector(".bgColors3Card");
-  const img = card.querySelector(".s3CardImg");
-  const title = card.querySelector(".s3CardTitle");
-  const arrow = card.querySelector(".arrDv1");
+  document.querySelectorAll(".s3CardT").forEach((card) => {
+    const bg = card.querySelector(".bgColors3Card");
+    const img = card.querySelector(".s3CardImg");
+    const title = card.querySelector(".s3CardTitle");
+    const arrow = card.querySelector(".arrDv1");
 
-  card.addEventListener("mouseenter", () => {
-    gsap.to(bg, {
-      y: "100%",
-      x: "-100%",
-      opacity: 1,
-      scale: 1,
-      borderLeftRadius: "10%",
-      duration: 0.5,
+    card.addEventListener("mouseenter", () => {
+      gsap.to(bg, {
+        y: "100%",
+        x: "-100%",
+        opacity: 1,
+        scale: 1,
+        borderLeftRadius: "10%",
+        duration: 0.5,
+      });
+      gsap.to(img, {
+        y: "-10%",
+      });
+      gsap.to(title, {
+        y: "100%",
+        color: "black",
+      });
+      gsap.to(arrow, {
+        x: "-140%",
+        y: "50%",
+        ease: "power2",
+        scale: 1,
+      });
     });
-    gsap.to(img, {
-      y: "-10%",
-    });
-    gsap.to(title, {
-      y: "100%",
-      color: "black",
-    });
-    gsap.to(arrow, {
-      x: "-140%",
-      y: "50%",
-      ease: "power2",
-      scale: 1,
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(bg, {
+        y: "-100%",
+        x: "100%",
+        opacity: 0,
+        scale: 0,
+        borderLeftRadius: "10%",
+        duration: 0.8,
+      });
+      gsap.to(img, {
+        y: "-4%",
+      });
+      gsap.to(title, {
+        y: "-10%",
+        color: "black",
+      });
+      gsap.to(arrow, {
+        x: "100%",
+        y: "-50%",
+        scale: 0,
+      });
     });
   });
-
-  card.addEventListener("mouseleave", () => {
-    gsap.to(bg, {
-      y: "-100%",
-      x: "100%",
-      opacity: 0,
-      scale: 0,
-      borderLeftRadius: "10%",
-      duration: 0.8,
-    });
-    gsap.to(img, {
-      y: "-4%",
-    });
-    gsap.to(title, {
-      y: "-10%",
-      color: "black",
-    });
-    gsap.to(arrow, {
-      x: "100%",
-      y: "-50%",
-      scale: 0,
-    });
-  });
-});
 }
 
 section3CardAnimations();
@@ -356,53 +384,57 @@ function contactUsModal() {
 contactUsModal();
 
 function enquiryFormSubmit() {
-  let url = "https://script.google.com/macros/s/AKfycbz9nZZUrKNdnH63kpaqXAfh6Xjl96Q7IpFVD--92LdkvbbwwfF2VkuSFQAGeoJDLLVZ/exec";
+  let url =
+    "https://script.google.com/macros/s/AKfycbz9nZZUrKNdnH63kpaqXAfh6Xjl96Q7IpFVD--92LdkvbbwwfF2VkuSFQAGeoJDLLVZ/exec";
   let form = document.querySelector("#form");
   let form2 = document.querySelector("#form2");
-  
-  form.addEventListener("submit", (e)=>{
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     e.target.enBtn.innerHTML = "Submitting";
     let enquiryData = new FormData(form);
     fetch(url, {
-      method:"POST",
-      body:enquiryData
-    }).then((res)=>res.text()).then((finalRes)=>{
-        e.target.enBtn.innerHTML = "Submit";
-       alert("Enquiry Submit Successfully!");
-      console.log('====================================');
-      console.log(finalRes);
-      console.log('====================================');
-    }).catch((err)=>{
-     
-      console.log('====================================');
-      console.log("Form Err ", err);
-      alert("Server Error, Please Try Again.")
-      console.log('====================================');
+      method: "POST",
+      body: enquiryData,
     })
+      .then((res) => res.text())
+      .then((finalRes) => {
+        e.target.enBtn.innerHTML = "Submit";
+        alert("Enquiry Submit Successfully!");
+        console.log("====================================");
+        console.log(finalRes);
+        console.log("====================================");
+      })
+      .catch((err) => {
+        console.log("====================================");
+        console.log("Form Err ", err);
+        alert("Server Error, Please Try Again.");
+        console.log("====================================");
+      });
   });
 
-  form2.addEventListener("submit", (e)=>{
+  form2.addEventListener("submit", (e) => {
     e.preventDefault();
     e.target.enBtn.innerHTML = "Submitting";
     let enquiryData = new FormData(form);
     fetch(url, {
-      method:"POST",
-      body:enquiryData
-    }).then((res)=>res.text()).then((finalRes)=>{
-        e.target.enBtn.innerHTML = "Submit";
-       alert("Enquiry Submit Successfully!");
-      console.log('====================================');
-      console.log(finalRes);
-      console.log('====================================');
-    }).catch((err)=>{
-     
-      console.log('====================================');
-      console.log("Form Err ", err);
-      alert("Server Error, Please Try Again.")
-      console.log('====================================');
+      method: "POST",
+      body: enquiryData,
     })
+      .then((res) => res.text())
+      .then((finalRes) => {
+        e.target.enBtn.innerHTML = "Submit";
+        alert("Enquiry Submit Successfully!");
+        console.log("====================================");
+        console.log(finalRes);
+        console.log("====================================");
+      })
+      .catch((err) => {
+        console.log("====================================");
+        console.log("Form Err ", err);
+        alert("Server Error, Please Try Again.");
+        console.log("====================================");
+      });
   });
-
 }
 enquiryFormSubmit();
